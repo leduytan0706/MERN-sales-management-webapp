@@ -1,0 +1,38 @@
+.product-search-bar{
+    box-sizing: border-box;
+    width: 100%;
+    background-color: #6a93df;
+    padding: 1rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    .search-label{
+        box-sizing: border-box;
+        width: 80%;
+        display: flex;
+        border: 2px solid white;
+
+        .search-icon{
+            width: 4%;
+            padding: 0.3rem;
+            background-color: white;
+            border: none;
+            
+        }
+
+        #searchProduct{
+            width: 100%;
+            padding: 0.3rem;
+            border: none;
+            outline: none;
+            font-size: 1rem;
+
+        }
+
+    }
+
+    .search-label:has(#searchProduct:focus){
+        border-color: black;
+    }
+}

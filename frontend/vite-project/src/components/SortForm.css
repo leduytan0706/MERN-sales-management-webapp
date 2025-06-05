@@ -1,0 +1,185 @@
+.sort-form{
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 0.85fr;
+
+
+    .sort-dropdown, .sort-radio{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.3rem;
+    }
+
+    .sort-dropdown{
+        font-size: 0.9rem;
+        
+        #sort-criteria{
+            width: 70%;
+            padding: 0.4rem;
+            outline: none;
+            border: 2px solid #d0d0e0;
+            border-radius: 5px;
+            font-size: 0.8rem;
+        }
+    }
+
+    .sort-radio{
+        .sort-radio-input{
+            box-sizing: border-box;
+            width: 20px;
+            height: 20px;
+            outline: none;
+            border: 2px solid #446BA2;
+            border-radius: 50%;
+            appearance: none;
+            background-color: transparent;
+            outline: none;
+        }
+
+        .sort-radio-input:checked ~ .sort-icon{
+                color: #446BA2;
+
+        }
+
+        .sort-radio-input:not(:disabled):checked{
+            border-color: #446BA2;
+            background-color: #446BA2;
+            background-clip: content-box;
+            padding: 3px;
+            background-image: radial-gradient(
+                circle,
+                var(#446BA2) 0%,
+                var(#446BA2) 50%,
+                transparent 60%,
+                transparent 100%
+            );
+
+            .sort-icon{
+                color: #446BA2;
+                background-color: #446BA2;
+            }
+
+        }
+
+        .sort-radio-input:disabled {
+            background-color: #d9d9d9;
+        }
+          
+        .sort-radio-input:disabled:checked {
+            background-image: radial-gradient(
+              circle,
+              var(#8b8c89) 0%,
+              var(#8b8c89) 50%,
+              transparent 50%,
+              transparent 100%
+            );
+
+            .sort-icon{
+                color: #446BA2;
+                background-color: #446BA2;
+            }
+            
+        }
+
+        .sort-radio-input:focus-visible {
+            background-color: #a3cef1;
+            outline: 6px solid #a3cef1;
+            .sort-icon{
+                color: #446BA2;
+                background-color: #446BA2;
+            }
+        }
+
+    }
+
+    .sort-submit{
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        
+        .sort-btn{
+            padding: 0.3rem;
+            width: 80%;
+            border: none;
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            align-items: center;
+            border-radius: 5px;
+            background-color: #4E56A9;
+            color: white;
+            cursor: pointer;
+    
+            .sort-icon{
+                width: 20%;
+            }
+        }
+    }
+    
+}
+
+@media (hover: hover) {
+    .sort-radio-input:not(:disabled):hover {
+      background-color: #a3cef1;
+      outline: 6px solid #a3cef1;
+    }
+}
+
+@media (max-width: 1024px) {
+    .sort-form{
+        grid-template-columns: 1.5fr 1fr 1fr 0.85fr;
+
+        .sort-radio{
+            .sort-radio-input{
+                width: 15px;
+                height: 15px;
+            }
+
+            .sort-icon{
+                width: 22%;
+            }
+        }
+
+        .sort-btn{
+            font-size: 0.85rem;
+
+            .sort-icon{
+                width: 30%;
+                font-size: 1.2rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .sort-form{
+        grid-template-columns: 1.5fr 0.5fr 0.5fr 0.8fr;
+
+        .sort-dropdown{
+            font-size: 0.8rem;
+        }
+
+        .sort-radio{
+            .sort-radio-input{
+                width: 20px;
+                height: 20px;
+            }
+
+            .sort-icon{
+                width: 30%;
+            }
+        }
+
+        .sort-btn{
+            font-size: 0.8rem;
+
+            .sort-icon{
+                width: 30%;
+                font-size: 1rem;
+            }
+        }
+    }
+}
+
+

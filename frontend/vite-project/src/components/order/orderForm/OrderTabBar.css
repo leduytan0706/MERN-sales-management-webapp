@@ -1,0 +1,83 @@
+.order-tabbar{
+    width: 95%;
+    box-sizing: border-box;
+    padding: 0.5rem 0.5rem 0;
+    display: flex; 
+    gap: 1px;/* Adjust spacing between tabcards */
+    justify-content: flex-start;
+    align-items: flex-end;
+    scrollbar-width: thin;
+    scrollbar-color: #f0f0f0 transparent;
+    overflow-x: auto;
+    white-space: nowrap;
+    scrollbar-width: thin; /* For Firefox */
+
+    .order-tabcard, .active-tabcard, .add-btn{
+        height: 80%;
+    }
+
+
+    .order-tabcard, .active-tabcard{
+        box-sizing: border-box;
+        width: max-content;
+        padding: 0.2rem;
+        margin: 0;
+        background-color: white;
+        border-radius: 5px 5px 0 0;
+        flex-shrink: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+
+        span {
+            font-size: 0.9rem;
+
+        }
+
+        .remove-btn{
+            width: 30%;
+            cursor: pointer;
+            transition: all 0.2s ease-in-out;
+
+            &:hover{
+                color: rgb(55, 97, 235);
+            }
+        }
+
+        
+    }
+
+    .order-tabcard{
+        opacity: 0.6;
+
+        &:hover{
+            opacity: 0.7;
+        }
+    }
+
+    .active-tabcard{
+        opacity: 1;
+        font-weight: 550;
+    }
+
+    .add-btn{
+        display: flex;
+        align-items: center;
+        padding: 0 0.2rem;
+        cursor: pointer;
+
+        &:hover{
+            background-color: rgba(255, 255, 255, 0.358);
+        }
+    }
+}
+
+.order-tabbar::-webkit-scrollbar {
+    height: 4px;
+}
+  
+.order-tabbar::-webkit-scrollbar-thumb {
+    background: #000000;
+    border-radius: 4px;
+}

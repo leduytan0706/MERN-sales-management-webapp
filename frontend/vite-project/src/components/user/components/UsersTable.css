@@ -1,0 +1,55 @@
+.user-table{
+    width: 100%;
+
+    .user-table-head, .user-table-data{
+        width: 100%;
+        padding: 0.5rem;
+        display: grid;
+        grid-template-columns: auto 10% 15% 10% 20% 25% 15%;
+        border-bottom: 2px solid #F2F1F6;
+    }
+
+    .user-table-head{
+        font-size: 1rem;
+        font-weight: 550;
+        color: rgb(146, 146, 146);
+    }
+
+    .user-table-data{
+        font-size: 1rem;
+        color: rgb(32, 32, 32);
+
+        .user-table-avatar{
+            width: 35%;
+            height: auto;
+
+            img{
+                width: 100%;
+                height: auto;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+        }
+
+        .user-table-action{
+
+            .delete-button{
+                background-color: white;
+                border: none;
+                cursor: pointer;
+                transition: all 0.2s ease-in-out;
+                color: rgb(255, 80, 80);
+
+                &:hover{
+                    color:rgb(171, 25, 25);
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px){
+    .user-table{
+        width: 1000px;
+    }
+}

@@ -1,0 +1,314 @@
+.update-discount{
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    min-height: 1000px;
+    padding: 1rem;
+
+    .update-discount-section{
+        box-sizing: border-box;
+        width: 60%;
+        margin: auto;
+        background-color: white;
+        border: 2px solid #F2F1F6;
+        padding: 1rem;
+
+        .update-discount-form{
+
+            
+
+            .input-section{
+                box-sizing: border-box;
+
+                .form-section-title{
+                    font-size: 1.1rem;
+                    padding: 0.5rem 0;
+                    background-color: #0051C4;
+                    color: white;
+                }
+
+                .form-field{
+                    padding: 0.5rem;
+
+                    .form-label{
+                        
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: flex-start;
+                        gap: 0.5rem;
+
+                        .form-name{
+                            font-size: 0.9rem;
+
+                        }
+
+                        .form-input{
+                            width: 90%;
+                            padding: 0.2rem;
+                            font-size: 0.8rem;
+                            font-family: sans-serif;
+                        }
+                    }
+                }
+                
+
+                .basic-info{
+                    box-sizing: border-box;
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    gap: 0.5rem;
+
+                    .form-section-title, .code-field{
+                        grid-column: 1 / 3;
+                        
+                    }
+
+                    
+
+                    .code-field{
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+
+                        .form-label{
+                            
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: flex-start;
+                            align-items: center;
+
+                            .form-input{
+                                width: 50%;
+                            }
+                            
+                        }
+
+                        .auto-apply-checkbox{
+                            width: max-content;
+
+                            label{
+                                display: flex;
+                                justify-content: flex-start;
+                                align-items: center;
+
+                                span{
+                                    font-size: 0.9rem;
+
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .range-info{
+                    box-sizing: border-box;
+                    display: grid;
+                    grid-template-columns: 1fr 1fr 1fr;
+
+                    .form-section-title{
+                        grid-column: 1 / 4;
+                    }
+
+                    .form-field{
+
+                        .form-label{
+
+                            .form-select{
+                                width: 90%;
+                                padding: 0.2rem;
+                                font-size: 0.8rem;
+                                font-family: sans-serif;
+                            }
+                        }
+                    }
+
+                    .selection-field{
+                        box-sizing: border-box;
+                        grid-column: 1 / 4;
+                        background-color: rgb(250, 249, 249);
+                        border: 1px solid rgb(219, 219, 219);
+                        margin-top: 1rem;
+                        padding: 1rem;
+
+                        .form-field{
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: flex-start;
+                            padding: 0.5rem 0;
+
+                            .form-label{
+                                display: flex;
+                                flex-direction: row;
+                                justify-content: flex-start;
+                                align-items: center;
+
+
+                                .form-name{
+                                    margin: 0;
+                                }
+                            }
+                        }
+
+                        .categorial-items-field{
+                            box-sizing: border-box;
+                            
+                            .categorial-items-label{
+                                width: 100%;
+                                margin: 1rem 0;
+                                display: grid;
+                                grid-template-columns: 1fr 2fr;
+
+                                
+                                .form-name{
+
+                                }
+
+                                .form-select{
+
+                                }
+                            }
+                        }
+
+                        .optional-items-field{
+                            box-sizing: border-box;
+
+                            .optional-items-label{
+                                width: 90%;
+                                margin: 1rem auto;
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: center;
+                                align-items: center;
+                            }
+
+                            .selected-items-list{
+                                box-sizing: border-box;
+                                width: 100%;
+                                background-color: white;
+                                border: 1px solid rgb(181, 181, 181);
+                                min-height: 200px;
+                                max-height: 200px;
+                                overflow-y: auto;
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: flex-start;
+                                align-items: center;
+
+                                .selected-item-card{
+                                    box-sizing: border-box;
+                                    background-color: rgb(240, 240, 240);
+                                    border: 1px solid rgb(210, 210, 210);
+                                    width: 100%;
+                                    padding: 0.3rem;
+                                    justify-content: space-between;
+
+                                    .item-info{
+                                        gap: 0.3rem;
+
+                                        img{
+                                            width: 25px;
+                                            height: auto;
+                                            border-radius: 5px;
+                                            border: 1px solid rgb(255, 255, 255);
+                                        }
+
+                                        p{
+                                            margin: 0;
+                                            padding: 0;
+                                            font-size: 0.85rem;
+                                            font-weight: 500;
+                                        }
+                                    }
+
+                                    .rm-btn{
+                                        cursor: pointer;
+
+                                        .rm-icon{
+                                            width: 20px;
+                                            height: auto;
+                                            transition: all 0.2s ease-in-out;
+                                        }
+
+                                        &:hover{
+                                            .rm-icon{
+                                                color: red;
+                                            }
+                                        }
+                                    }
+
+                                    
+                                }
+                            }
+                        }
+                    }
+
+                }
+
+
+
+            }
+
+            .submit-section{
+                margin: 1rem;
+                .submit-btn{
+                    width: 30%;
+                    padding: 0.3rem;
+                    font-size: 0.9rem;
+                    background-color:#0051C4;
+                    color: white;
+                    border: none;
+                    cursor: pointer;
+
+
+                    &:hover{
+
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .add-discount{
+
+        .add-discount-section{
+            width: 80%;
+            .add-discount-form{
+
+                .input-section{
+
+                    .form-field{
+
+                        .form-label{
+
+                            .form-name{
+                                font-size: 0.85rem;
+                            }
+                        }
+                    }
+
+                    .basic-info{
+
+                        .code-field{
+
+                            .auto-apply-checkbox{
+
+                                label{
+                                    
+
+                                    span{
+                                        font-size: 0.8rem;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

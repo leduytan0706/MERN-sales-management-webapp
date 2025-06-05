@@ -1,0 +1,34 @@
+.user-page{
+    box-sizing: border-box;
+    width: 100%;
+    padding: 1rem;
+
+    .user-page-header{
+
+    }
+
+    .user-table-section{
+        box-sizing: border-box;
+        width: 100%;
+        margin: auto;
+        padding: 0.5rem;
+        background-color: white;
+        border-width: 1px 2px 2px;
+        border-style: solid;
+        border-color: #F2F1F6;
+        border-radius: 5px;
+        box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+
+        
+    }
+}
+
+@media (max-width: 768px){
+    .user-page{
+
+        .user-table-section{
+
+            overflow-x: scroll;
+        }
+    }
+}

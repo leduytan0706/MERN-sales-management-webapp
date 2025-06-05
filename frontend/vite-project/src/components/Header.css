@@ -1,0 +1,41 @@
+.header{
+    box-sizing: border-box;
+    width: 100%;
+    height: 10vh;
+    padding: 10px 20px;
+    background-color: white;
+    border-bottom: 3px solid #F0EEEA;
+    display: grid;
+    grid-template-columns: 1fr 0.5fr 1fr;
+
+
+    .header-title{
+        font-family: Arial, Helvetica, sans-serif;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        font-size: 1.5rem;
+        font-weight: 600;
+
+    }
+
+    .header-info{
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 10px;
+        .datetime{
+            font-size: 20px;
+        }
+
+        .header-icon{
+
+        }
+    }
+}
+
+@media (max-width: 768px){
+    .header{
+        grid-template-columns: 1fr 0.1fr 1fr;
+    }
+}

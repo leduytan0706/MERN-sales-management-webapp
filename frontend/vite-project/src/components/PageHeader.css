@@ -1,0 +1,78 @@
+.page-header{
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-bottom: 1rem;
+
+    .page-title{
+
+        font-size: 1.7rem;
+        font-weight: 550;
+    }
+
+    .page-action{
+        display: flex;
+        gap: 10px;
+        justify-content: flex-end;
+        align-items: center;
+
+        .upload-button, .add-button{
+            box-sizing: border-box;
+            padding: 0.5rem;
+            width: auto;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0.3rem;
+            transition: all .2s ease-in-out;
+
+            .button-title{
+                font-size: 1rem;
+                font-weight: 550;
+            }
+        }
+
+        .upload-button{
+
+            border: 2px solid #FFD022;
+            border-radius: 5px;
+
+            
+            .upload-icon, .button-title{
+                color: #FFD022;
+            }
+
+            &:hover{
+                background-color: #FFD022;
+                border-color: #FFD022;
+                .upload-icon, .button-title{
+                    color: white;
+                }
+            }
+
+        
+            
+        }
+
+        .add-button{
+            background-color: green;;
+            border: 2px solid green;
+            border-radius: 5px;
+
+            text-decoration: none;
+            
+            .add-icon, .button-title{
+                color: white;
+            }
+
+            &:hover{
+                background-color: rgb(1, 80, 1);
+                border: 2px solid rgb(1, 80, 1)
+            }
+        }
+
+
+
+    }
+}

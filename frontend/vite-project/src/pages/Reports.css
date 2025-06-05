@@ -1,0 +1,137 @@
+.reports-page{
+    box-sizing: border-box;
+    padding: 1rem;
+    
+    .reports-page-header{
+        box-sizing: border-box;
+        width: 100%;
+        padding-bottom: 1rem;
+
+        .reports-header-title{
+            font-size: 1.7rem;
+            font-weight: 550;
+            
+        }
+    }
+
+    .reports-page-content{
+        box-sizing: border-box;
+        width: 100%;
+        padding: 1rem;
+        background-color: white;
+        border: 2px solid rgb(232, 232, 232);
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+
+
+        .reports-filter-form{
+            box-sizing: border-box;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 40% 22.5% 5% 22.5% auto;
+
+            
+            .filter-field{
+                box-sizing: border-box;
+
+                .filter-label{
+                    width: 100%;
+                    gap: 0.5rem;
+
+                    span{
+                        font-size: 0.9rem;
+                    }
+
+                    .filter-date-input{
+                        box-sizing: border-box;
+                        width: 60%;
+                        padding: 0.3rem;
+                        font-size: 0.8rem;
+                        border: 2px solid grey;
+                        border-radius: 5px;
+                        font-family: sans-serif;
+
+                    }
+                }
+            }
+
+            .report-type-select{
+                width: 70%;
+                padding: 0.3rem;
+                font-size: 0.8rem;
+            }
+
+            .filter-submit{
+                
+                .submit-btn{
+                    box-sizing: border-box;
+                    border: none;
+                    background-color: #1f79f8;
+                    color: white;
+                    padding: 0.5rem;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    transition: all 0.2s ease-in-out;
+                    font-size: 0.9rem;
+
+                    &:hover{
+                        background-color: #1860c3;
+                    }
+                }
+            }
+        }
+
+        .reports-table-section{
+            
+
+            .reports-table{
+
+            }
+        }
+    }
+}
+
+@media (max-width: 768px){
+    .reports-page{
+
+        .reports-page-content{
+            .reports-filter-form{
+                grid-template-columns: 1fr 0.2fr 1fr 0.5fr;
+                
+                .filter-field{
+                    padding: 0.3rem; 
+                    .filter-label{
+
+                        .filter-date-input{
+                            width: 70%;
+                        }
+                        span{
+                            font-size: 0.8rem;
+                        }
+                    }
+                }
+
+                
+
+                .report-type-field{
+                    grid-column: 1 / 5;
+                    .report-type-select{
+                        width: 80%;
+                        margin: auto;
+                        padding: 0.3rem;
+                        font-size: 0.8rem;
+                    }
+                }
+
+            }
+
+            .reports-table-section{
+            
+                overflow-x: scroll;
+
+            }
+
+        }
+
+        
+    }
+}

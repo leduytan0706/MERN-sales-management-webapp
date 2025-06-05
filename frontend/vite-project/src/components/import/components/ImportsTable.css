@@ -1,0 +1,96 @@
+.import-table{
+    width: 100%;
+    border-collapse: collapse; 
+    .import-table-header, .import-table-data{
+        width: 100%;
+        display: grid;
+        grid-template-columns: auto 20% 15% 20% 25% 10%;
+    }
+
+    .import-table-header{
+        color: rgb(169, 169, 169);
+        th{
+            width: 100%;
+            padding: 0.5rem 0;
+            border-bottom: 2px solid #F7F7F7;
+            font-weight: 100;
+            font-style: normal;
+            font-size: 0.95rem;
+        }
+        
+    }
+
+    .import-table-data{
+        cursor: pointer;
+        
+        td{
+            padding: 0.7rem 0;
+            font-weight: 540;
+            border-bottom: 2px solid #F3F7F7;
+            font-size: 1rem;
+
+            img{
+                width: 35%;
+                height: 85%;
+            }
+        }
+
+        .import-item-action{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+
+            .import-item-btn{
+                padding: 0.2rem;
+                cursor: pointer;
+                transition: all .2s ease-in-out;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                .import-item-icon{
+                    width: 80%;
+                    height: 80%;
+                    
+                }
+            }
+
+            .edit-btn{
+
+                border: none;
+                background-color: rgb(255, 255, 255);
+                color: rgb(73, 109, 241);
+                cursor: pointer;
+
+
+                &:hover{
+
+                    color: rgb(2, 52, 151);
+                }
+            }
+
+            .delete-btn{
+                border: none;
+                background-color: rgb(255, 255, 255);
+                color: rgb(248, 70, 70);
+                cursor: pointer;
+
+                &:hover{
+
+                    color: rgb(176, 1, 1);
+                }
+            }
+        }
+
+        &:hover{
+            background-color: rgb(238, 238, 238);
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .import-table{
+        width: 1000px;
+    }
+}

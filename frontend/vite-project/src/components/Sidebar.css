@@ -1,0 +1,413 @@
+.sidebar-container{
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    font-family: sans-serif;
+    position: sticky;
+    padding: 0.5rem 0;
+
+    .sidebar-desktop{
+        height: 100%;
+        grid-template-rows: 1fr 6fr;
+        .title{
+            display: flex;
+            flex-direction: column;
+            padding: 0.3rem;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+    
+            text-decoration: none;
+            color: black;
+            border: none;
+    
+            .logo{
+                width: 40%;
+                height: 80%;
+    
+            }
+    
+            .company-name{
+                font-size: 1.7rem;
+                font-weight: 600;
+            }
+        }
+    
+        .menu{
+            display: grid;
+            grid-template-rows: 1fr 8fr auto;
+    
+            .navbar{
+                display: flex;
+                flex-direction: column;
+                .nav-link{
+    
+                    padding: 0.3rem 0.5rem;
+                    text-decoration: none;
+                    color: black;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    gap: 10px;
+                    transition: .1s ease-in-out;
+    
+                    .nav-icon{
+                        width: 25%;
+                        height: 70%;
+                    }
+    
+                    .nav-title{
+                        font-size: 1.3rem;
+                    }
+                }
+    
+                .nav-link:hover, .nav-active{
+                    background-color: #EFF3FE;
+                    border-left: 3px solid #446BA2;
+                    .nav-icon{
+                        color: #446BA2;
+                    }
+    
+                    .nav-title{
+                        color: #446BA2
+                    }
+                }
+    
+    
+                
+            }
+    
+            .space-holder2{
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: flex-end;
+
+                .account-link{
+                    position: relative;
+                    margin: 0;
+                    padding: 0;
+                    text-decoration: none;
+                    list-style-type: none;
+                    color: black;
+                    transition: .1s ease-in-out;
+                    cursor: pointer;
+    
+                    .account-card{
+                        position: relative;
+                        padding: 0.5rem 1rem;
+                        display: flex;
+                        gap: 7px;
+                        justify-content: flex-start;
+                        align-items: center;
+                        z-index: 9999;
+                        overflow: visible;
+                        
+    
+                        .account-avatar{
+                            width: 20%;
+                            height: 60%;
+                            border-radius: 50%;
+                            object-fit: cover;
+                        }
+    
+                        .account-name{
+    
+                            font-size: 1.1rem;
+                        }
+    
+                        .submenu-icon{
+                            position: absolute;
+                            left: 80%;
+                            width: 15%;
+                            height: 50%;
+                        }
+    
+                        .submenu{
+                            position: absolute;
+                            left: 101%;
+                            bottom: 0%;
+                            width: 85%;
+                            padding: 0;
+                            box-sizing: border-box;
+                            list-style-type: none;
+                            display: none;
+                            flex-direction: column;
+                            gap: 10px;
+                            font-size: 1.2rem;
+                            background-color: rgb(253, 250, 250);
+                            border-radius: 10px;
+                            z-index: 9999;
+                            opacity: 1;
+                            visibility: visible;
+                            background: white; /* Đảm bảo nội dung rõ ràng */
+                            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    
+                            li{
+                                z-index: 9999;
+                                background: white;
+                                opacity: 1;
+                                .sub-link{
+                                    z-index: 9999;
+                                    background: white;
+                                    opacity: 1;
+                                    padding: 0.6em 10px;                                
+                                    text-decoration: none;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: flex-start;
+                                    gap: 20px;
+                                    color: black;
+                                    transition: .1s ease-in-out;
+                                    
+                                }
+                
+                
+                                .sub-link:hover{
+                                    background-color: #EFF3FE;
+                                    border-right: 3px solid #446BA2;
+                                    color: #446BA2
+                                }
+                
+                                .logout-button{
+                                    z-index: 9999;
+                                    opacity: 1;
+                                    width: 100%;
+                                    background-color: white;
+                                    border: none;
+                                    text-align: left;
+                                    font-size: 1.2rem;
+                                    cursor: pointer;
+                                }
+                
+                            }
+            
+                            
+            
+                        }
+                    }
+    
+                    &:hover{
+                        background-color: #EFF3FE;
+                        border-left: 3px solid #446BA2;
+                        color: #446BA2;
+                    }
+    
+                    .account-card:hover .submenu{
+                        display:block;
+                    }
+    
+                    
+                }
+    
+                
+    
+                .account-link:hover{
+                    .submenu{
+                        opacity: 1;
+                        z-index: 1;
+                    }
+                }
+    
+                .not-displayed{
+                    opacity: 0;
+                }
+    
+                
+    
+    
+            }   
+        }
+
+    }
+    
+
+    .sidebar-mobile{
+        display: none;
+    }
+}
+
+@media (max-width: 1024px) {
+
+    .sidebar-container{
+        .sidebar-desktop {
+            display: none;
+        }
+        
+        .sidebar-mobile{
+            display: block;
+    
+            .title{
+                .logo{
+                    width: 70%;
+                    height: auto;
+                    object-fit: cover;
+                }
+            }
+    
+            .menu{
+                display: grid;
+                grid-template-rows: 1fr 7fr 1fr;
+    
+                .navbar{
+                    display: flex;
+                    flex-direction: column;
+                    .nav-link{
+        
+                        padding: 1rem 0.5rem;
+                        text-decoration: none;
+                        color: black;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 0.5rem;
+                        transition: .1s ease-in-out;
+        
+                        .nav-icon{
+                            width: 60%;
+                            height: auto;
+                        }
+    
+                    }
+        
+                    .nav-link:hover, .nav-active{
+                        background-color: #EFF3FE;
+                        border-left: 0.2rem solid #446BA2;
+                        .nav-icon{
+                            color: #446BA2;
+                        }
+        
+                        .nav-title{
+                            color: #446BA2;
+                        }
+                    }
+        
+        
+                    
+                }
+        
+                .space-holder2{
+                    height: 100%;
+                    z-index: 9999;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+    
+                    .account-link{
+                        position: relative;
+                        margin: 0;
+                        padding: 0;
+                        text-decoration: none;
+                        list-style-type: none;
+                        color: black;
+                        transition: .1s ease-in-out;
+                        cursor: pointer;
+        
+                        .account-card{
+                            position: relative;
+                            padding: 0.5rem 1rem;
+                            display: flex;
+                            gap: 7px;
+                            justify-content: flex-start;
+                            align-items: center;
+                            z-index: 9999;
+                            overflow: visible;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            
+        
+                            .account-avatar{
+                                width: 60%;
+                                height: auto;
+                                border-radius: 50%;
+                                object-fit: cover;
+                            }
+    
+                            .submenu{
+                                box-sizing: border-box;
+                                position: absolute;
+                                left: 105%;
+                                bottom: 0%;
+                                width: 80%;
+                                padding: 0;
+                                box-sizing: border-box;
+                                list-style-type: none;
+                                display: none;
+                                flex-direction: column;
+                                gap: 10px;
+                                font-size: 1rem;
+                                font-weight: 550;
+                                background-color: rgb(253, 250, 250);
+                                border-radius: 5px;
+                                z-index: 9999;
+                                box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        
+                                li{
+                                    .sub-link{
+                                        background: white;
+                                        opacity: 1;
+                                        padding: 0.3rem;                                
+                                        text-decoration: none;
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
+                                        gap: 0.5rem;
+                                        color: black;
+                                        transition: .1s ease-in-out;
+    
+                                        .sub-icon{
+                                            width: 60%;
+                                            height: auto;
+                                        }
+                                        
+                                    }
+                    
+                    
+                                    .sub-link:hover{
+                                        background-color: #EFF3FE;
+                                        border-right: 3px solid #446BA2;
+                                        color: #446BA2
+                                    }
+                    
+                                    .logout-button{
+                                        background-color: white;
+                                        border: none;
+                                        width: 100%;
+                                        text-align: left;
+                                        font-size: 1rem;
+                                        cursor: pointer;
+                                    }
+                    
+                                }
+                
+                                
+                
+                            }
+        
+                        }
+    
+                        &:hover{
+                            background-color: #EFF3FE;
+                            border-left: 3px solid #446BA2;
+                            color: #446BA2;
+                        }
+        
+                        .account-card:hover .submenu{
+                            display:block;
+                        }
+            
+                    }
+        
+    
+        
+                }   
+            }
+    
+            
+        }
+    }
+    
+}
+

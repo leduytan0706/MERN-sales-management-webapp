@@ -1,0 +1,121 @@
+.product-search-result{
+    box-sizing: border-box;
+    width: 100%;
+    height: 90vh;
+    background-color: rgb(253, 252, 252);
+    overflow-x: hidden;
+    overflow-y: scroll;
+    border-right: 1px solid rgb(204, 204, 204);
+
+    .result-title{
+        padding: 0.5rem 1.1rem;
+        font-size: 1.2em;
+
+        h5{
+            margin: 0;
+            padding: 0;
+            
+        }
+    }
+
+    .product-list{
+        width: 97%;
+        margin: auto;
+        padding: 1rem 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        gap: 0.2rem;
+
+        .product-card{
+            cursor: pointer;
+            padding: 0.3rem;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            border: 1px solid rgb(232, 232, 232);
+            transition: all 0.2s ease-in-out;
+
+            .product-image{
+                position: relative;
+                width: 100%;
+                height: 7rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: center;
+                img{
+                    width: 90%;
+                    height: 100%;
+                }
+
+                .product-price{
+                    position: absolute;
+                    width: 100%;
+                    top: 73%;
+                    background-color: black;
+                    opacity: 0.8;
+                    color: white;
+                    font-size: 0.8em;
+                    padding: 0.3rem;
+
+
+                    h4{
+                        text-align: center;
+                        margin: 0;
+                        padding: 0;
+                    }
+                    
+
+                    
+                }
+
+
+            }
+
+            .product-info{
+                padding: 0.5rem 0.2rem;
+                
+                .product-name,.product-stock, .product-barcode{
+                    margin: 0;
+                    padding: 0;
+                    text-align: center;
+                    
+                }
+    
+                .product-name{
+                    font-size: 0.8rem;
+                    font-weight: 540;
+                }
+    
+                .product-stock{
+                    font-size: 0.8rem;
+                    
+                }
+
+                .product-barcode{
+                    font-size: 0.8rem;
+                    font-weight: 550;
+                }
+            }
+        }  
+        
+        .product-card:hover{
+            background-color: #dfe9fd;
+            border-color: #dfe9fd;
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .product-search-result{
+
+        .product-list{
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+
+
+        }
+    }
+}

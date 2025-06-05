@@ -1,0 +1,100 @@
+.account-snippet{
+    width: 40%;
+    .card-title{
+        padding: 0.8rem;
+        font-size: 1rem;
+        font-weight: 400;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 5px 5px 0 0;
+        background-color: #0052a4;
+
+        h3{
+            margin: 0;
+            padding: 0;
+            color: whitesmoke;
+        }
+    }
+
+    .card-content{
+        padding: 10px;
+        background-color: white;
+        color: black;
+
+        .card-warn{
+            padding: 0.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(241, 241, 241);
+            border: 1px solid rgb(214, 214, 214);
+
+            .card-warn-text{
+                margin: 0;
+                padding: 0;
+                color: rgb(216, 24, 24);
+                font-weight: 550;
+                font-size: 1rem;
+            }
+        }
+        
+        .account-info{
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 0.5rem;
+
+            .info-card{
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                gap: 0.3rem;
+
+                h3, h4{
+                    margin: 0;
+                    padding: 0;
+                    
+                }
+
+                h3{
+                    color: rgb(129, 129, 129);
+                }
+
+                .password-toggle{
+                    border: none;
+                    background-color: transparent;
+                    cursor: pointer;
+                }
+
+            }
+        }
+
+        .card-action{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .return-btn{
+                box-sizing: border-box;
+                padding: 0.5rem;
+                border: none;
+                border-radius: 5px;
+                background-color: rgb(43, 124, 223);
+                color: white;
+                font-size: 1rem;
+                cursor: pointer;
+                transition: all 0.2s ease-in-out;
+
+                &:hover{
+                    background-color: rgb(10, 82, 171);
+
+                }
+            }
+        }
+
+    }
+}

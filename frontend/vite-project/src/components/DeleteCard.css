@@ -1,0 +1,73 @@
+.delete-card{
+    background-color: #FFF;
+    color: black;
+    border-radius: 5px;
+    
+    .card-title{
+        padding: 0.8rem;
+        font-size: 1rem;
+        font-weight: 400;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 5px 5px 0 0;
+        background-color: #0052a4;
+
+        h3{
+            margin: 0;
+            padding: 0;
+            color: whitesmoke;
+        }
+    }
+
+    .card-content{
+        padding: 10px;
+        h2{
+            font-size: 1.2rem;
+            font-weight: 550;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card-action{
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+
+            .cancel-btn, .delete-btn{
+                box-sizing: border-box;
+                padding: 7px;
+                border-radius: 5px;
+                cursor: pointer;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 1rem;
+                transition: all .2s ease-in-out;
+            }
+
+            .cancel-btn{
+                background-color: rgb(218, 218, 218);
+                border: 2px solid rgb(218, 218, 218);
+
+                &:hover{
+                    background-color: rgb(183, 183, 183);
+                    border: 2px solid rgb(183, 183, 183);
+                }
+            }
+
+            .delete-btn{
+                background-color: rgb(248, 115, 115);
+                border: 2px solid rgb(248, 115, 115);
+                
+                &:hover{
+                    background-color: rgb(249, 61, 61);
+                    border: 2px solid rgb(249, 61, 61);
+                }
+            }
+        }
+
+    }
+}

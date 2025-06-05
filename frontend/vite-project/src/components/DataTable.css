@@ -1,0 +1,40 @@
+
+.data-table{
+    box-sizing: border-box;
+    width: 100%;
+    border-collapse: collapse;
+
+    .data-table-header, .data-table-data, .data-table-foot{
+        width: 100%;
+        padding: 0.3rem;
+        
+        column-gap: 0.3rem;
+    }
+
+    .data-table-header, .data-table-data{
+        border-bottom: 2px solid #F2F1F6;
+    }
+
+    .data-table-data{
+        font-size: 1rem;
+
+        .product-image{
+            width: 30%;
+            height: auto;
+        }
+
+        
+    }
+
+    tr:nth-of-type(even){
+        background-color: aliceblue;
+    }
+
+    
+}
+
+@media (max-width: 768px){
+    .data-table{
+        width: 1000px;
+    }
+}

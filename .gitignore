@@ -1,0 +1,28 @@
+backend/node_modules
+backend/.env
+
+
+# Logs
+frontend/vite-project/logs
+frontend/vite-project/*.log
+frontend/vite-project/npm-debug.log*
+frontend/vite-project/yarn-debug.log*
+frontend/vite-project/yarn-error.log*
+frontend/vite-project/pnpm-debug.log*
+frontend/vite-project/lerna-debug.log*
+
+frontend/vite-project/node_modules
+frontend/vite-project/dist
+frontend/vite-project/dist-ssr
+frontend/vite-project/*.local
+
+# Editor directories and files
+frontend/vite-project/.vscode/*
+frontend/vite-project/!.vscode/extensions.json
+frontend/vite-project/.idea
+frontend/vite-project/.DS_Store
+frontend/vite-project/*.suo
+frontend/vite-project/*.ntvs*
+frontend/vite-project/*.njsproj
+frontend/vite-project/*.sln
+frontend/vite-project/*.sw?

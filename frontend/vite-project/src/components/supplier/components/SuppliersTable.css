@@ -1,0 +1,83 @@
+.supplier-table{
+    box-sizing: border-box;
+    width: 100%;
+    .supplier-table-header, .supplier-table-data{
+        width: 100%;
+        display: grid;
+        grid-template-columns: auto 35% 10% 20% 20% 10%;
+    }
+
+    th,td{
+        width: 100%;
+        padding: 0.5rem 0;
+        box-sizing: border-box;
+
+    }
+
+    .supplier-table-header{
+        color: rgb(169, 169, 169);
+        th{
+            width: 100%;
+            border-bottom: 2px solid #F7F7F7;
+            font-weight: 100;
+            font-style: normal;
+        }
+    }
+
+    .supplier-table-data{
+        cursor: pointer;
+
+        td{
+            font-weight: 540;
+            border-bottom: 2px solid #F3F7F7;
+        }
+
+        .supplier-item-action{
+            gap: 5px;
+
+            .supplier-item-btn{
+                padding: 5px;
+                cursor: pointer;
+                transition: all .2s ease-in-out;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                .supplier-item-icon{
+                    width: 80%;
+                    height: 80%;
+                    
+                }
+            }
+
+            .edit-btn{
+
+                border: none;
+                background-color: rgb(255, 255, 255);
+                color: rgb(73, 109, 241);
+                
+
+
+                &:hover{
+
+                    color: rgb(2, 52, 151);
+                }
+            }
+
+            .delete-btn{
+                border: none;
+                background-color: rgb(255, 255, 255);
+                color: rgb(248, 70, 70);
+
+                &:hover{
+
+                    color: rgb(176, 1, 1);
+                }
+            }
+        }
+
+        &:hover{
+            background-color: rgb(238, 238, 238);
+        }
+    }
+}

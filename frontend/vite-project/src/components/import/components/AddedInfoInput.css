@@ -1,0 +1,50 @@
+
+
+.added-info{
+    box-sizing: border-box;
+    width: 100%;
+    background-color: white;
+    border: 2px solid #F2F1F6;
+    border-radius: 5px;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+
+    .form-field{
+        
+        .form-label{
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+
+            span{
+
+            }
+
+            .form-input{
+                width: 100%;
+                height: auto;
+                padding: 0.1rem;
+                border: 2px solid grey;
+                border-top-right-radius: 5px;
+                border-bottom-right-radius: 5px;
+                font-size: 1rem;
+            }
+        }
+
+
+    }
+
+    .note-field {
+        
+        .form-input{
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            resize: none;
+            width: 100%;
+            overflow-y: scroll;
+        }
+    }
+}

@@ -1,0 +1,43 @@
+.add-order-page{
+    box-sizing: border-box;
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    display: flex;
+
+    .search-bar, .order-form-header {
+        max-height: 8vh;
+        height: 8vh;
+    }
+
+    .search-product-section{
+        box-sizing: border-box;
+        width: 50%;
+        max-width: 50%;
+        background-color: white;
+
+
+    }
+
+    .order-form-section{
+        box-sizing: border-box;
+        width: 50%;
+        max-width: 50%;
+        background-color: white;
+
+        
+    }
+
+    .space-holder{
+        height: 2vh;
+        display: block;
+        background-color: #6a93df;
+
+    }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}

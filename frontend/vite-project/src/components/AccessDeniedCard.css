@@ -1,0 +1,61 @@
+.access-denied-card{
+    .card-title{
+        padding: 0.8rem;
+        font-size: 1rem;
+        font-weight: 400;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 5px 5px 0 0;
+        background-color: #0052a4;
+
+        h3{
+            margin: 0;
+            padding: 0;
+            color: whitesmoke;
+        }
+    }
+
+    .card-content{
+        padding: 10px;
+        background-color: white;
+        h2{
+            color: black;
+            font-size: 1.2rem;
+            font-weight: 550;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card-action{
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+
+            .return-btn{
+                box-sizing: border-box;
+                padding: 0.3rem;
+                border-radius: 5px;
+                cursor: pointer;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 1rem;
+                transition: all .2s ease-in-out;
+                border: none;
+                background-color: rgb(43, 124, 223);
+                color: white;
+
+                &:hover{
+                    background-color: rgb(10, 82, 171);
+
+                }
+            }
+
+
+        }
+
+    }
+}

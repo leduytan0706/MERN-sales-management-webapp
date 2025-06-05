@@ -1,0 +1,145 @@
+.loading-spinner{
+    width: 100%;
+    height: 100%;
+}
+.update-import{
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+
+    .update-header{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        .update-title{
+            display: flex;
+            gap: 10px;
+            justify-content: flex-start;
+            align-items: center;
+            .back-btn{
+                padding: 0.3rem;
+                border: 3px solid black;
+                background-color: #F2F1F6;
+                border-radius: 10px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+                color: black;
+                text-decoration: none;
+            }
+    
+            h1{
+                font-size: 1.7rem;
+            }
+    
+        
+        }
+        
+    }
+
+    .update-section{
+        box-sizing: border-box;
+        width: 100%;
+
+        form{
+            width: 100%;
+            .added-info, .import-product-info{
+                box-sizing: border-box;
+                width: 100%;
+                background-color: white;
+                border: 2px solid #F2F1F6;
+                border-radius: 5px;
+            }
+
+            .added-info{
+                padding: 1rem;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 1rem;
+ 
+                .form-field{
+                    
+                    .form-label{
+                        display: flex;
+                        flex-direction: column;
+                        gap: 0.5rem;
+                    }
+
+
+                }
+            }
+        }
+
+        
+
+        
+
+        
+
+        .import-product-info{
+            width: 100%;
+            margin-top: 10px;
+            padding: 1rem;
+
+            .import-product-title{
+                border-bottom: 1px solid black;
+                padding: 0.5rem 0;
+                .import-section-title{
+                    margin: 0;
+                    padding: 0;
+                    font-size: 1.2em;
+                    font-weight: 550;
+                }
+            }
+
+            
+            
+
+            
+
+            .import-products-table{
+                box-sizing: border-box;
+                width: 100%;
+                overflow-x: auto;;
+            }
+        }
+
+        .update-import-submit{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            button{
+                margin: 1rem 0;
+                padding: 0.8rem 1.5rem;
+                background-color: #475798;
+                color: white;
+                border: 1px solid #475798;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: all .2s ease-in-out;
+
+                &:hover{
+                    background-color: #303a6d;
+
+                }
+            }
+        }
+        
+    }
+    
+
+    
+}
+
+@media (max-width: 1024px) {
+    .update-import{
+        .import-products-table{
+            overflow-x: auto;
+    
+        }
+    }
+    
+}
