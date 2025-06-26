@@ -4,6 +4,7 @@ import cookieParser from 'cookie-parser';
 import cors from 'cors';
 import path from "path";
 import { fileURLToPath } from 'url';
+import rateLimit from 'express-rate-limit';
 
 import authRouter from './routes/auth.route.js';
 import categoryRouter from './routes/category.route.js';

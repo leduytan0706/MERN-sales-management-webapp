@@ -9,7 +9,12 @@ const importSchema = new mongoose.Schema({
     note: { type: String, default: ''},
     productQuantity: { type: Number, default: 0},
     totalAmount: { type: Number, default: 0},
-    createdAt: { type: Date, default: Date.now()}
+    createdAt: { type: Date, default: Date.now()},
+    createdBy: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'User',
+        required: false
+    }
 },{
     timestamps: true
 });

@@ -20,7 +20,12 @@ const productSchema = new mongoose.Schema({
             ref: 'Supplier',
             required: true
         }
-    ]
+    ],
+    createdBy: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'User',
+        required: false
+    }
 },
 {
     timestamps: true

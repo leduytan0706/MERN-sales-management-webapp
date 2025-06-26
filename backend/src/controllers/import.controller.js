@@ -237,6 +237,13 @@ const getImportById = async (req, res) => {
 };
 
 const addImport = async (req,res) => {
+    if (req.user.username === 'leduytan0706') {
+        const count = await Product.countDocuments({ createdBy: req.user._id });
+        if (count >= 10) {
+            return res.status(403).json({ message: "Tài khoản demo chỉ được tạo tối đa 10 sản phẩm." });
+        }
+    }
+
     const {importData} = req.body;
     const {supplierId, importDate, note, items: importItems} = importData;
 
@@ -254,6 +261,7 @@ const addImport = async (req,res) => {
         supplier: existingSupplier._id,
         createdAt: importDate || importDate.length > 0? new Date(importDate): new Date(),
         note,
+        createdBy: req.user._id
     });
     let newImportItems;
 

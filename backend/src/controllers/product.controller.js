@@ -108,6 +108,14 @@ const getProductsByFilter = async (req, res) => {
 };
 
 const addProduct = async (req,res) => {
+    if (req.user.username === 'leduytan0706') {
+        const count = await Product.countDocuments({ createdBy: req.user._id });
+        if (count >= 10) {
+            return res.status(403).json({ message: "Tài khoản demo chỉ được tạo tối đa 10 sản phẩm." });
+        }
+    }
+
+
     const {barcode, name, price, unit, stock, stockNorm, image, note, categoryId} = req.body;
     if (!name || !unit || !categoryId) {
         return res.status(400).json({
@@ -144,7 +152,8 @@ const addProduct = async (req,res) => {
             note,
             category: existingCategory._id,
             image: imageUrl,
-            supplier: []
+            supplier: [],
+            createdBy: req.user._id
         });
 
         await newProduct.save();
@@ -160,6 +169,13 @@ const addProduct = async (req,res) => {
 };
 
 const addProductsFromFile = async (req,res) => {
+    if (req.user.username === 'leduytan0706') {
+        const count = await Product.countDocuments({ createdBy: req.user._id });
+        if (count >= 10) {
+            return res.status(403).json({ message: "Tài khoản demo chỉ được tạo tối đa 10 sản phẩm." });
+        }
+    }
+
     const {productData} = req.body;
     if (!productData || productData.length === 0) {
         return res.status(400).json({
@@ -185,6 +201,7 @@ const addProductsFromFile = async (req,res) => {
                 note: product.note,
                 category: categoryId,
                 image: product.image,
+                createdBy: req.user._id
             };
             newProducts.push(newProduct);
         }
