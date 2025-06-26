@@ -40,7 +40,7 @@ import User from "./pages/User.jsx";
 import UpdateProfile from "./components/auth/UpdateProfile.jsx";
 import AddUser from "./components/user/AddUser.jsx";
 import ProfileDetail from "./components/auth/ProfileDetail.jsx";
-import ProtectedRoute from "./components/protectedRoute.jsx";
+import ProtectedRoute from "./components/ProtectedRoute.jsx";
 import PendingDev from "./components/PendingDev.jsx";
 import Discount from "./pages/Discount.jsx";
 import DiscountDetail from "./components/discount/DiscountDetail.jsx";
