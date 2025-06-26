@@ -29,6 +29,11 @@ Tech Stack: MERN stack - MongoDB, Express, React, Node.js + Cloudinary
 
 Demo Version of Web App: [Vite + React](https://mern-sales-management-ui.vercel.app/)
 
+Demo account: 
+
+* Email: leduytan0706@example.com
+* Password: Contact/DM/Message to get password
+
 ## Upload File Function
 
 Product Management Area has a function that you can upload an excel (.xlsx) file, the system will read the data and display the preview products before adding it to the database depending on user's confirmation
