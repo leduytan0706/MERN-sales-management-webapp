@@ -24,6 +24,14 @@ const PORT = process.env.PORT || 5001;
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
+const limiter = rateLimit({
+  windowMs: 15 * 60 * 1000,
+  max: 100,
+  message: "Bạn gửi quá nhiều yêu cầu, vui lòng thử lại sau."
+});
+
+app.use(limiter);
+
 app.use(cors({
     origin: process.env.CLIENT_URL, // Chỉ cho phép từ frontend của bạn
     methods: ['GET', 'POST', 'PUT', 'PATCH','DELETE'], // Các phương thức được phép

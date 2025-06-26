@@ -75,6 +75,10 @@ const getUsers = async (req,res) => {
 };
 
 const addUser = async (req,res) => {
+    if (req.user.username == 'leduytan0706') {
+        return res.status(403).json({ message: 'Tài khoản demo không được thực hiện thao tác này.' });
+    }
+
     const {userData} = req.body;
     const {email, password, username, avatar, employeeRoles, phoneNumber} = userData;
 
@@ -158,6 +162,10 @@ const addUser = async (req,res) => {
 };
 
 const deleteUser = async (req,res) => {
+    if (req.user.username == 'leduytan0706') {
+        return res.status(403).json({ message: 'Tài khoản demo không được thực hiện thao tác này.' });
+    }
+
     const userId = req.params.id;
     if (!userId) {
         return res.status(404).json({ message: 'ID người dùng không hợp lệ' });

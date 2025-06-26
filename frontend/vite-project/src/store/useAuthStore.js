@@ -20,12 +20,12 @@ const useAuthStore = create((set,get) => ({
         } catch (error) {
             console.log(`Error in signUp: ${error.message}`);
             set({authUser: null})
-            if (error.response){
-                toast.error(error.response.data.message);
-            }
-            else {
-                toast.error(error.message);
-            }
+            // if (error.response){
+            //     toast.error(error.response.data.message);
+            // }
+            // else {
+            //     toast.error(error.message);
+            // }
         } finally{
             set({isCheckAuth: false});
         }
