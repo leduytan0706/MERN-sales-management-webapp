@@ -197,7 +197,7 @@ const logOut = async (req,res) => {
         res.cookie('jwt','',{
             maxAge: 0,
             httpOnly: true, // prevent XSS attacks cross-site scripting attacks
-            sameSite: 'strict', // CSRF attacks cross-site request forgery attacks
+            sameSite: 'None', // CSRF attacks cross-site request forgery attacks
             secure: process.env.NODE_ENV === 'production' // only set secure cookies in production environment
         });
         
