@@ -195,7 +195,10 @@ const deleteUser = async (req,res) => {
 const logOut = async (req,res) => {
     try {
         res.cookie('jwt','',{
-            maxAge: 0
+            maxAge: 0,
+            httpOnly: true, // prevent XSS attacks cross-site scripting attacks
+            sameSite: 'strict', // CSRF attacks cross-site request forgery attacks
+            secure: process.env.NODE_ENV === 'production' // only set secure cookies in production environment
         });
         
     } catch (error) {
