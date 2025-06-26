@@ -25,7 +25,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 app.use(cors({
-    origin: 'http://localhost:5173', // Chỉ cho phép từ frontend của bạn
+    origin: process.env.CLIENT_URL, // Chỉ cho phép từ frontend của bạn
     methods: ['GET', 'POST', 'PUT', 'PATCH','DELETE'], // Các phương thức được phép
     allowedHeaders: ['Content-Type', 'Authorization'],
     credentials: true // Header được phép
@@ -53,12 +53,12 @@ app.use('/api/reports', analyticRouter);
 
 
 // --- Serve React static files ---
-app.use(express.static(path.join(__dirname, '../../frontend/vite-project/dist')));
+// app.use(express.static(path.join(__dirname, '../../frontend/vite-project/dist')));
 
 // Bắt tất cả các request không phải API trả về React index.html
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '../../frontend/vite-project/dist', 'index.html'));
-});
+// app.get('*', (req, res) => {
+//   res.sendFile(path.join(__dirname, '../../frontend/vite-project/dist', 'index.html'));
+// });
 
 // middleware only executed if there's an error passed
 app.use((error, req, res, next) => {
