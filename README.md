@@ -29,10 +29,7 @@ Tech Stack: MERN stack - MongoDB, Express, React, Node.js + Cloudinary
 
 Demo Version of Web App: [Vite + React](https://mern-sales-management-ui.vercel.app/)
 
-Demo account: 
-
-* Email: leduytan0706@example.com
-* Password: Contact/DM/Message to get password
+Demo account: Check the directory backend/user_demo.json
 
 ## Upload File Function
 
