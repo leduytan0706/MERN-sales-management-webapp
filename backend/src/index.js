@@ -36,7 +36,7 @@ app.use(limiter);
 app.use(cors({
     origin: process.env.CLIENT_URL, // Chỉ cho phép từ frontend của bạn
     methods: ['GET', 'POST', 'PUT', 'PATCH','DELETE'], // Các phương thức được phép
-    allowedHeaders: ['Content-Type', 'Authorization'],
+    allowedHeaders: ['Content-Type', 'Authorization', 'Access-Control-Allow-Origin'],
     credentials: true // Header được phép
 }));
 
