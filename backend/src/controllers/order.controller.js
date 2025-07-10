@@ -151,13 +151,6 @@ const getOrderById = async (req, res) => {
 
 
 const addOrder = async (req, res) => {
-    if (req.user.username === 'leduytan0706') {
-        const count = await Product.countDocuments({ createdBy: req.user._id });
-        if (count >= 10) {
-            return res.status(403).json({ message: "Tài khoản demo chỉ được tạo tối đa 10 sản phẩm." });
-        }
-    }
-
     const {orderData} = req.body;
     const {customerName, discountAmount, debtAmount, orderDate, note, items: orderItems } = orderData;
  
